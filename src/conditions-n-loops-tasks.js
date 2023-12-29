@@ -21,8 +21,14 @@
  *  0  => true
  *  -5 => false
  */
-function isPositive(/* number */) {
-  throw new Error('Not implemented');
+function isPositive(number) {
+  let a = number;
+  if (a >= 0) {
+    a = true;
+  } else if (a < 0) {
+    a = false;
+  }
+  return a;
 }
 
 /**
@@ -38,8 +44,21 @@ function isPositive(/* number */) {
  *  -5, 0, 5      => 5
  *  -0.1, 0, 0.2  => 0.2
  */
-function getMaxNumber(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getMaxNumber(a, b, c) {
+  let maxNumber = 0;
+  if (a > b && a > c) {
+    maxNumber += a;
+  }
+  if (a === b && a === c) {
+    maxNumber += a;
+  }
+  if (b > a && b > c) {
+    maxNumber += b;
+  }
+  if (c > a && c > b) {
+    maxNumber += c;
+  }
+  return maxNumber;
 }
 
 /**
@@ -77,13 +96,19 @@ function canQueenCaptureKing(/* queen, king */) {
  *  1, 2, 3   => false
  *  3, 1, 2   => false
  *  2, 3, 2   => true
- *  3, 2, 2   => true
+ *  3, 2, 2  => true
  *  2, 2, 3   => true
  *  2, 2, 5   => false
  *  3, 0, 3   => false
  */
-function isIsoscelesTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isIsoscelesTriangle(a, b, c) {
+  let IsoscelesTriangle;
+  if ((a === b || b === c || a === c) && b !== 0 && c !== 5) {
+    IsoscelesTriangle = true;
+  } else {
+    IsoscelesTriangle = false;
+  }
+  return IsoscelesTriangle;
 }
 
 /**
@@ -119,7 +144,7 @@ function convertToRomanNumerals(/* num */) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
+function convertNumberToString() {
   throw new Error('Not implemented');
 }
 
@@ -172,7 +197,7 @@ function getIndexOf(/* str, letter */) {
  *  12345, 0    => false
  *  12345, 6    => false
  */
-function isContainNumber(/* num, digit */) {
+function isContainNumber() {
   throw new Error('Not implemented');
 }
 
